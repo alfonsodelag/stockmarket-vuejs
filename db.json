@@ -1,0 +1,31 @@
+{
+  "posts": [
+  {
+      "categories": [],
+      "created_at": "2020-01-05 13:42:27.496799",
+      "icon_url": "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
+      "id": "LPilIudjQdayxTMPQJu_Mg",
+      "updated_at": "2020-01-05 13:42:27.496799",
+      "url": "https://api.chucknorris.io/jokes/LPilIudjQdayxTMPQJu_Mg",
+      "value": "Terrorist once tried hijaking Chuck Norris's privat jet. Instead what happened was the world record broken for farthest boot up somebody's ass."
+  },
+  {
+  "categories": [],
+  "created_at": "2020-01-05 13:42:19.104863",
+  "icon_url": "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
+  "id": "Ypo86oVzQc-JFnB6muMKtw",
+  "updated_at": "2020-01-05 13:42:19.104863",
+  "url": "https://api.chucknorris.io/jokes/Ypo86oVzQc-JFnB6muMKtw",
+  "value": "The last digit of pi is Chuck Norris. He is the end of all things."
+  },
+  {
+    "categories": [],
+    "created_at": "2020-01-05 13:42:28.664997",
+    "icon_url": "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
+    "id": "s4yF81kaTgy-T1JSFvSVBA",
+    "updated_at": "2020-01-05 13:42:28.664997",
+    "url": "https://api.chucknorris.io/jokes/s4yF81kaTgy-T1JSFvSVBA",
+    "value": "Chuck Norris is the only man ever to beat a brick wall in a game of tennis."
+  }
+]
+}
