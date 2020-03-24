@@ -58,7 +58,7 @@
 </template>
 
 <script> 
-const URL = 'http://localhost:3000/posts';
+const URL = 'https://market-place-laravel.herokuapp.com/api/v1/prices';
 
 export default {
 	data() {
@@ -88,14 +88,16 @@ export default {
     },
     getContentFromApi() {
       console.log("Getting Content From API...");
+
       //document.write(content);
       axios
         .get(
-          `http://localhost:3000/posts`
+          URL
         )
         .then(res => {
                 console.log("then working");
-          this.stocks = [...this.stocks, ...res.data];
+                console.log(res.data.data);
+          this.stocks = [...this.stocks, ...res.data.data];
         })
         .catch(err => console.log(err));
     }
