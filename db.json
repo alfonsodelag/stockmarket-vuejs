@@ -1,31 +1,184 @@
 {
   "posts": [
-  {
-      "categories": [],
-      "created_at": "2020-01-05 13:42:27.496799",
-      "icon_url": "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
-      "id": "LPilIudjQdayxTMPQJu_Mg",
-      "updated_at": "2020-01-05 13:42:27.496799",
-      "url": "https://api.chucknorris.io/jokes/LPilIudjQdayxTMPQJu_Mg",
-      "value": "Terrorist once tried hijaking Chuck Norris's privat jet. Instead what happened was the world record broken for farthest boot up somebody's ass."
+    {
+      "id": 1,
+      "name": "Bayer PLC",
+      "unique_code": "BAYE706",
+      "description": "Sit iure qui et.",
+      "logo": "https://lorempixel.com/640/480/?93771",
+      "created_at": "2020-03-24T08:45:13.000000Z",
+      "updated_at": "2020-03-24T08:45:13.000000Z"
   },
   {
-  "categories": [],
-  "created_at": "2020-01-05 13:42:19.104863",
-  "icon_url": "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
-  "id": "Ypo86oVzQc-JFnB6muMKtw",
-  "updated_at": "2020-01-05 13:42:19.104863",
-  "url": "https://api.chucknorris.io/jokes/Ypo86oVzQc-JFnB6muMKtw",
-  "value": "The last digit of pi is Chuck Norris. He is the end of all things."
+      "id": 11,
+      "name": "Stehr-Kuhlman",
+      "unique_code": "STEH631",
+      "description": "Sint aut eveniet iure possimus impedit et eos.",
+      "logo": "https://lorempixel.com/640/480/?98973",
+      "created_at": "2020-03-24T08:45:13.000000Z",
+      "updated_at": "2020-03-24T08:45:13.000000Z"
   },
   {
-    "categories": [],
-    "created_at": "2020-01-05 13:42:28.664997",
-    "icon_url": "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
-    "id": "s4yF81kaTgy-T1JSFvSVBA",
-    "updated_at": "2020-01-05 13:42:28.664997",
-    "url": "https://api.chucknorris.io/jokes/s4yF81kaTgy-T1JSFvSVBA",
-    "value": "Chuck Norris is the only man ever to beat a brick wall in a game of tennis."
+      "id": 21,
+      "name": "Bogisich Group",
+      "unique_code": "BOGI932",
+      "description": "Quae perspiciatis ut incidunt.",
+      "logo": "https://lorempixel.com/640/480/?17955",
+      "created_at": "2020-03-24T08:45:13.000000Z",
+      "updated_at": "2020-03-24T08:45:13.000000Z"
+  },
+  {
+      "id": 31,
+      "name": "Medhurst, Kutch and Tremblay",
+      "unique_code": "MEDH485",
+      "description": "Laboriosam ad numquam voluptas libero.",
+      "logo": "https://lorempixel.com/640/480/?12638",
+      "created_at": "2020-03-24T08:45:13.000000Z",
+      "updated_at": "2020-03-24T08:45:13.000000Z"
+  },
+  {
+      "id": 41,
+      "name": "Gutkowski-Doyle",
+      "unique_code": "GUTK172",
+      "description": "Numquam harum odit et facilis ut voluptatum.",
+      "logo": "https://lorempixel.com/640/480/?42989",
+      "created_at": "2020-03-24T08:45:13.000000Z",
+      "updated_at": "2020-03-24T08:45:13.000000Z"
+  },
+  {
+      "id": 51,
+      "name": "Skiles-Deckow",
+      "unique_code": "SKIL356",
+      "description": "Animi iste velit et voluptas odit.",
+      "logo": "https://lorempixel.com/640/480/?13033",
+      "created_at": "2020-03-24T08:45:13.000000Z",
+      "updated_at": "2020-03-24T08:45:13.000000Z"
+  },
+  {
+      "id": 61,
+      "name": "Carter, Williamson and Beer",
+      "unique_code": "CART740",
+      "description": "Voluptatem quo qui molestias a dolores.",
+      "logo": "https://lorempixel.com/640/480/?54623",
+      "created_at": "2020-03-24T08:45:13.000000Z",
+      "updated_at": "2020-03-24T08:45:13.000000Z"
+  },
+  {
+      "id": 71,
+      "name": "Bartell Group",
+      "unique_code": "BART950",
+      "description": "Illum minima distinctio fugiat.",
+      "logo": "https://lorempixel.com/640/480/?33954",
+      "created_at": "2020-03-24T08:45:13.000000Z",
+      "updated_at": "2020-03-24T08:45:13.000000Z"
+  },
+  {
+      "id": 81,
+      "name": "Bailey-Olson",
+      "unique_code": "BAIL785",
+      "description": "Est ipsa quia exercitationem.",
+      "logo": "https://lorempixel.com/640/480/?37008",
+      "created_at": "2020-03-24T08:45:13.000000Z",
+      "updated_at": "2020-03-24T08:45:13.000000Z"
+  },
+  {
+      "id": 91,
+      "name": "Howe Ltd",
+      "unique_code": "HOWE377",
+      "description": "Debitis et sint dolores et totam molestiae est.",
+      "logo": "https://lorempixel.com/640/480/?76476",
+      "created_at": "2020-03-24T08:45:13.000000Z",
+      "updated_at": "2020-03-24T08:45:13.000000Z"
+  },
+  {
+      "id": 101,
+      "name": "Friesen-Gottlieb",
+      "unique_code": "FRIE107",
+      "description": "Minima laudantium quia sint non sint.",
+      "logo": "https://lorempixel.com/640/480/?22080",
+      "created_at": "2020-03-24T08:45:13.000000Z",
+      "updated_at": "2020-03-24T08:45:13.000000Z"
+  },
+  {
+      "id": 111,
+      "name": "Windler, Schultz and Hodkiewicz",
+      "unique_code": "WIND226",
+      "description": "Suscipit id occaecati qui repudiandae.",
+      "logo": "https://lorempixel.com/640/480/?22840",
+      "created_at": "2020-03-24T08:45:13.000000Z",
+      "updated_at": "2020-03-24T08:45:13.000000Z"
+  },
+  {
+      "id": 121,
+      "name": "Wiegand-Herzog",
+      "unique_code": "WIEG639",
+      "description": "Ipsa quia occaecati ab voluptatem eius a ut.",
+      "logo": "https://lorempixel.com/640/480/?87538",
+      "created_at": "2020-03-24T08:45:14.000000Z",
+      "updated_at": "2020-03-24T08:45:14.000000Z"
+  },
+  {
+      "id": 131,
+      "name": "Reichert, Sipes and Windler",
+      "unique_code": "REIC884",
+      "description": "Consequatur quidem quia minus tenetur.",
+      "logo": "https://lorempixel.com/640/480/?53517",
+      "created_at": "2020-03-24T08:45:14.000000Z",
+      "updated_at": "2020-03-24T08:45:14.000000Z"
+  },
+  {
+      "id": 141,
+      "name": "Dicki, Orn and Jerde",
+      "unique_code": "DICK904",
+      "description": "Voluptatem cupiditate pariatur placeat.",
+      "logo": "https://lorempixel.com/640/480/?31287",
+      "created_at": "2020-03-24T08:45:14.000000Z",
+      "updated_at": "2020-03-24T08:45:14.000000Z"
+  },
+  {
+      "id": 151,
+      "name": "Cruickshank Inc",
+      "unique_code": "CRUI217",
+      "description": "Praesentium eaque voluptatibus veniam molestias.",
+      "logo": "https://lorempixel.com/640/480/?71350",
+      "created_at": "2020-03-24T08:45:14.000000Z",
+      "updated_at": "2020-03-24T08:45:14.000000Z"
+  },
+  {
+      "id": 161,
+      "name": "Reynolds-Strosin",
+      "unique_code": "REYN831",
+      "description": "Reiciendis nulla veniam sed deleniti.",
+      "logo": "https://lorempixel.com/640/480/?86036",
+      "created_at": "2020-03-24T08:45:14.000000Z",
+      "updated_at": "2020-03-24T08:45:14.000000Z"
+  },
+  {
+      "id": 171,
+      "name": "Abbott-Lind",
+      "unique_code": "ABBO700",
+      "description": "Odio sit totam sint optio aut deserunt.",
+      "logo": "https://lorempixel.com/640/480/?40172",
+      "created_at": "2020-03-24T08:45:14.000000Z",
+      "updated_at": "2020-03-24T08:45:14.000000Z"
+  },
+  {
+      "id": 181,
+      "name": "Price Ltd",
+      "unique_code": "PRIC1",
+      "description": "Eligendi molestiae et aliquid.",
+      "logo": "https://lorempixel.com/640/480/?41548",
+      "created_at": "2020-03-24T08:45:14.000000Z",
+      "updated_at": "2020-03-24T08:45:14.000000Z"
+  },
+  {
+      "id": 191,
+      "name": "Torp Ltd",
+      "unique_code": "TORP578",
+      "description": "Voluptatem vel quos beatae.",
+      "logo": "https://lorempixel.com/640/480/?78348",
+      "created_at": "2020-03-24T08:45:14.000000Z",
+      "updated_at": "2020-03-24T08:45:14.000000Z"
   }
 ]
 }

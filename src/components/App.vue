@@ -1,31 +1,46 @@
 <template>
-  <div>
-    
+
     <ul>
-      <table class="tg border">
-        <div class="row" v-for="joke in jokes" v-bind:key="joke.id">
+        <div class="row border" v-for="stock in stocks" v-bind:key="stock.id">
           <div class="col">
             <ul>
               <li>
-                <p>{{joke.value}}</p>
+                <p>{{stock.name}}</p>
               </li>
             </ul>
           </div>
-        </div>
-      </table>
-    
+          <div class="col">
+            <ul>
+              <li>
+                <p>{{stock.unique_code}}</p>
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <ul>
+              <li>
+                <img class="chart" src="/src/assets/images/chart.jpg" alt="chart">
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <ul>
+                <button class="btn btn-primary">Follow</button>
+            </ul>
+          </div>
+        </div>    
     </ul>
-  </div>
+    
 </template>
 
-<script>
+<script> 
 const URL = 'http://localhost:3000/posts';
 
 export default {
 	data() {
     return {
       el: '#app', 
-      jokes: [],
+      stocks: [],
       load: [],
       page: 1,
     };
@@ -56,8 +71,8 @@ export default {
         )
         .then(res => {
                 console.log("then working");
-                console.log(JSON.stringify(res.data[0].value));
-          this.jokes = [...this.jokes, ...res.data];
+                console.log(JSON.stringify(res.data[0].description));
+          this.stocks = [...this.stocks, ...res.data];
         })
         .catch(err => console.log(err));
     }
