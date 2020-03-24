@@ -3,16 +3,16 @@
     <ul>
 
       <div class="row">
-        <div class="col">
+        <div class="col-2">
           Name
         </div>
-        <div class="col">
+        <div class="col-3">
           Code
         </div>
-        <div class="col">
+        <div class="col-2">
           Price
         </div>
-        <div class="col">
+        <div class="col-2">
           Chart
         </div>
       </div>
@@ -28,7 +28,7 @@
         <div class="col">
           <ul>
             <li>
-              <p>{{stock.unique_code}}</p>
+              <p>{{stock.actions.unique_code}}</p>
             </li>
           </ul>
         </div>
@@ -52,13 +52,13 @@
           </ul>
         </div>
       </div>    
-      
+
     </ul>
     
 </template>
 
 <script> 
-const URL = 'https://market-place-laravel.herokuapp.com/api/v1/prices';
+const URL = 'http://localhost:3000/posts';
 
 export default {
 	data() {
@@ -91,11 +91,10 @@ export default {
       //document.write(content);
       axios
         .get(
-          `https://market-place-laravel.herokuapp.com/api/v1/prices`
+          `http://localhost:3000/posts`
         )
         .then(res => {
                 console.log("then working");
-                console.log(JSON.stringify(res.data[0].description));
           this.stocks = [...this.stocks, ...res.data];
         })
         .catch(err => console.log(err));
