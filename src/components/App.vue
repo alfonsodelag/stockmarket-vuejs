@@ -1,40 +1,44 @@
 <template>
 
     <ul>
-        <div class="row border" v-for="stock in stocks" v-bind:key="stock.id">
-          <div class="col">
-            <ul>
-              <li>
-                <p>{{stock.name}}</p>
-              </li>
-            </ul>
-          </div>
-          <div class="col">
-            <ul>
-              <li>
-                <p>{{stock.unique_code}}</p>
-              </li>
-            </ul>
-          </div>
-          <div class="col">
-            <ul>
-              <li>
-                <img class="chart" src="/src/assets/images/chart.jpg" alt="chart">
-              </li>
-            </ul>
-          </div>
-          <div class="col">
-            <ul>
-                <button class="btn btn-primary">Follow</button>
-            </ul>
-          </div>
-        </div>    
+
+      <div class="row">
+        <div class="col-3">
+          Name
+        </div>
+        <div class="col-3">
+          Code
+        </div>
+        <div class="col-3">
+          Chart
+        </div>
+      </div>
+      <div class="row border" v-for="stock in stocks" v-bind:key="stock.id">
+      <div class="col">
+        <p>{{stock.name}}</p>
+      </div>
+      <div class="col">
+        <p>{{stock.unique_code}}</p>
+      </div>
+      <div class="col">
+        <ul>
+          <li>
+            <img class="chart" src="/src/assets/images/chart.jpg" alt="chart">
+          </li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+            <button class="btn btn-primary">Follow</button>
+        </ul>
+      </div>
+    </div>    
     </ul>
     
 </template>
 
 <script> 
-const URL = 'http://localhost:3000/posts';
+const URL = 'https://market-place-laravel.herokuapp.com/api/v1/actions';
 
 export default {
 	data() {
@@ -67,7 +71,7 @@ export default {
       //document.write(content);
       axios
         .get(
-          ` http://localhost:3000/posts`
+          `https://market-place-laravel.herokuapp.com/api/v1/actions`
         )
         .then(res => {
                 console.log("then working");
