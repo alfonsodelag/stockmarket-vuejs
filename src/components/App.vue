@@ -48,7 +48,7 @@
         </div>
         <div class="col">
           <ul>
-              <button class="btn btn-primary">Follow</button>
+              <button :id=stock.actions.id class="btn btn-primary">Follow</button>
           </ul>
         </div>
       </div>    
