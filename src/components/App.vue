@@ -48,7 +48,7 @@
         </div>
         <div class="col">
           <ul>
-              <button :id=stock.actions.id class="btn btn-primary">Follow</button>
+              <button v-on:click="method" :id=stock.actions.id class="btn btn-primary">Follow</button>
           </ul>
         </div>
       </div>    
