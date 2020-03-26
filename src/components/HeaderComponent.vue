@@ -1,25 +1,25 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">    
-      <div class="mt-4 collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">List <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Top</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
+        <div class="mt-4 navbar-collapse row justify-content-around" id="navbarSupportedContent">
+            <ul class="navbar-nav ">
+                <li class="nav-item">
+                    <router-link to="/home" class="nav-link">List </router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link to="/top" class="nav-link">Top</router-link>
+                </li>
+            </ul>
+            <Searcher></Searcher>
+        </div>
     </nav>
 </template>
 
 <script>
+import Searcher from './Searcher.vue';
 export default {
     name: 'HeaderComponent',
-    
+    components: {
+    Searcher
+    },
 }
 </script>

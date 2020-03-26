@@ -9,7 +9,6 @@
 
 <script>
 import HeaderComponent from './HeaderComponent.vue';
-import Home from './Home.vue';
 import SubheaderComponent from './SubheaderComponent' ;
 
 
@@ -17,7 +16,6 @@ export default {
   name: 'app',
   components: {
     HeaderComponent,
-    Home,
     SubheaderComponent
   },
 }
