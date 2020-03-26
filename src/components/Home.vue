@@ -1,48 +1,31 @@
 <template>
-  <ul>
-    <div class="row">
-      <div class="col">Name</div>
-      <div class="col">Code</div>
-      <div class="col">Price</div>
-      <div class="col">Chart</div>
-    </div>
+    <ul>
+        <div class="row card-header">
+            <div class="col"><h6>Name</h6></div>
+            <div class="col"><h6>Code</h6></div>
+            <div class="col"><h6>Price</h6></div>
+            <div class="col"><h6>Chart</h6></div>
+            <div class="col"><h6>Actions</h6></div>
+        </div>
 
-    <div class="row border" v-for="stock in stocks" v-bind:key="stock.id">
-      <div class="col">
-        <ul>
-          <li>
-            <p>{{stock.actions.name}}</p>
-          </li>
-        </ul>
-      </div>
-      <div class="col">
-        <ul>
-          <li>
-            <p>{{stock.actions.unique_code}}</p>
-          </li>
-        </ul>
-      </div>
-      <div class="col">
-        <ul>
-          <li>
-            <p>{{stock.current_quantity}}€</p>
-          </li>
-        </ul>
-      </div>
-      <div class="col">
-        <ul>
-          <li>
-            <img class="chart" src="/src/assets/images/chart.jpg" alt="chart" />
-          </li>
-        </ul>
-      </div>
-      <div class="col">
-        <ul>
-          <button v-on:click="method" class="btn btn-primary" :id="stock.actions.id">Follow</button>
-        </ul>
-      </div>
-    </div>
-  </ul>
+        <div class="row border card-body" v-for="stock in stocks" v-bind:key="stock.id">
+            <div class="col">
+                <p>{{stock.actions.name}}</p>
+            </div>
+            <div class="col">
+                <p>{{stock.actions.unique_code}}</p>
+            </div>
+            <div class="col">
+                <p>{{stock.current_quantity}}$</p>
+            </div>
+            <div class="col">
+                <img class="chart" src="/src/assets/images/chart.jpg" alt="chart" />
+            </div>
+            <div class="col">
+                <button v-on:click="goDetail" class="btn btn-primary" :id=" stock.actions.id ">Detail</button>
+            </div>
+        </div>
+    </ul>
 </template>
 
 <script>
@@ -57,12 +40,12 @@ export default {
     };
   },
   mounted() {
-    console.log("mounted working");
+    // console.log("mounted working");
     this.getContentFromApi();
   },
   methods: {
     updateScrollEvent() {
-      console.log("update scroll working");
+    //   console.log("update scroll working");
       var updated = false;
       window.onscroll = ev => {
         var userPosition = window.innerHeight + window.scrollY;
@@ -77,16 +60,21 @@ export default {
         window.location.href="localhost:8080/detail"
     },
     getContentFromApi() {
-      console.log("Getting Content From API...");
+    //   console.log("Getting Content From API...");
       //document.write(content);
       axios
         .get(`https://market-place-laravel.herokuapp.com/api/v1/prices`)
         .then(res => {
-          console.log("then working");
-          console.log(res.data.data[0]);
+        //   console.log("then working");
+        //   console.log(res.data.data[0]);
           this.stocks = [...this.stocks, ...res.data.data];
         })
         .catch(err => console.log(err));
+    },
+    goDetail(e) {
+      const idTarget = e.target.id;
+      window.location.href='/#/detail/'+idTarget;
+      // console.log(idTarget);
     }
   }
 };

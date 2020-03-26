@@ -42,7 +42,7 @@
       </div>
       <div class="col">
         <ul>
-          <button class="btn btn-primary" :id="stock.actions.id">Follow</button>
+          <button class="btn btn-primary" :id=" stock.actions.id ">Follow</button>
         </ul>
       </div>
     </div>
@@ -60,6 +60,7 @@ export default {
     HeaderComponent,
     SubheaderComponent
   },
+  
 }
 </script>
 
