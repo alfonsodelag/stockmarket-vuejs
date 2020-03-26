@@ -25,7 +25,7 @@
       <div class="col">
         <ul>
           <li>
-            <p>{{stock.current_quantity}}</p>
+            <p>{{stock.current_quantity}}€</p>
           </li>
         </ul>
       </div>
@@ -38,7 +38,7 @@
       </div>
       <div class="col">
         <ul>
-          <button class="btn btn-primary" :id=" stock.actions.id ">Follow</button>
+          <button v-on:click="method" class="btn btn-primary" :id="stock.actions.id">Follow</button>
         </ul>
       </div>
     </div>
@@ -72,6 +72,9 @@ export default {
           this.getContentFromApi();
         }
       };
+    },
+    followUp(){
+        window.location.href="localhost:8080/detail"
     },
     getContentFromApi() {
       console.log("Getting Content From API...");

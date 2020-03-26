@@ -2,7 +2,7 @@
   <div id="app">
     <HeaderComponent></HeaderComponent>
     <SubheaderComponent></SubheaderComponent>
-    <Home></Home>
+    <router-view></router-view>
   </div>
     
 </template>
@@ -18,7 +18,7 @@ export default {
   components: {
     HeaderComponent,
     Home,
-    SubheaderComponent
+    SubheaderComponent,
   },
 }
 </script>

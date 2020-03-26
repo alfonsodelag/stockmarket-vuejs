@@ -55,7 +55,7 @@
 import HeaderComponent from './HeaderComponent.vue';
 import SubheaderComponent from './SubheaderComponent' ;
 export default {
-    name: 'CompanyDetail',
+    name: 'HeaderComponent',
     components: {
     HeaderComponent,
     SubheaderComponent
