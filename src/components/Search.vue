@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
     <ul>
         <div class="row card-header">
             <div class="col"><h6>Name</h6></div>
@@ -67,3 +68,69 @@ export default {
     
 }
 </script>
+=======
+
+<div>
+    <HeaderComponent></HeaderComponent>
+    <SubheaderComponent></SubheaderComponent>
+     <ul>
+    <div class="row">
+      <div class="col">Name</div>
+      <div class="col">Code</div>
+      <div class="col">Price</div>
+      <div class="col">Chart</div>
+    </div>
+
+    <div class="row border">
+      <div class="col">
+        <ul>
+          <li>
+            <p>{{stock.actions.name}}</p>
+          </li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li>
+            <p>{{stock.actions.unique_code}}</p>
+          </li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li>
+            <p>{{stock.current_quantity}}</p>
+          </li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li>
+            <img class="chart" src="/src/assets/images/chart.jpg" alt="chart" />
+          </li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <button class="btn btn-primary" :id="stock.actions.id">Follow</button>
+        </ul>
+      </div>
+    </div>
+  </ul>
+</div>
+</template>
+
+<script>
+
+import HeaderComponent from './HeaderComponent.vue';
+import SubheaderComponent from './SubheaderComponent' ;
+export default {
+    name: 'HeaderComponent',
+    components: {
+    HeaderComponent,
+    SubheaderComponent
+  },
+}
+</script>
+
+>>>>>>> 0939b63ed338135dc2a17b0fdbac53aaee6f93e9

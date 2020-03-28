@@ -63,6 +63,9 @@ export default {
         }
       };
     },
+    followUp(){
+        window.location.href="localhost:8080/detail"
+    },
     getContentFromApi() {
     //   console.log("Getting Content From API...");
       //document.write(content);
