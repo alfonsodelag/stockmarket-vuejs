@@ -8,20 +8,20 @@
             <div class="col"><h6>Actions</h6></div>
         </div>
 
-        <div class="row border card-body" v-for="stock in stocks" v-bind:key="stock.id">
-            <div class="col">
+        <div class="row border card-body " v-for="stock in stocks" v-bind:key="stock.id">
+            <div class="col d-flex align-items-center">
                 <p>{{stock.actions.name}}</p>
             </div>
-            <div class="col">
+            <div class="col d-flex align-items-center">
                 <p>{{stock.actions.unique_code}}</p>
             </div>
-            <div class="col">
+            <div class="col d-flex align-items-center">
                 <p>{{stock.current_quantity}}$</p>
             </div>
             <div class="col">
-                <img class="chart" src="/src/assets/images/chart.jpg" alt="chart" />
+                <Chart  class="chart" :idUrl="stock.actions.id" ></Chart>
             </div>
-            <div class="col">
+            <div class="col d-flex align-items-center">
                 <button v-on:click="goDetail" class="btn btn-primary" :id=" stock.actions.id ">Detail</button>
             </div>
         </div>
@@ -29,9 +29,15 @@
 </template>
 
 <script>
-const URL = "https://market-place-laravel.herokuapp.com/api/v1/prices";
+const URL = "https://market-place-laravel.herokuapp.com/api/v1/prices?page=1";
+
+import Chart from './Chart.vue';
 
 export default {
+  name: 'Home',
+    components: {
+        Chart
+    },
   data() {
     return {
       stocks: [],
@@ -42,6 +48,7 @@ export default {
   mounted() {
     // console.log("mounted working");
     this.getContentFromApi();
+
   },
   methods: {
     updateScrollEvent() {
@@ -63,11 +70,12 @@ export default {
         .get(`https://market-place-laravel.herokuapp.com/api/v1/prices`)
         .then(res => {
         //   console.log("then working");
-        //   console.log(res.data.data[0]);
+        
           this.stocks = [...this.stocks, ...res.data.data];
         })
         .catch(err => console.log(err));
     },
+
     goDetail(e) {
       const idTarget = e.target.id;
       window.location.href='/#/detail/'+idTarget;

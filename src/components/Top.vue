@@ -4,21 +4,25 @@
             <div class="col"><h6>Name</h6></div>
             <div class="col"><h6>Code</h6></div>
             <div class="col"><h6>Price</h6></div>
+            <div class="col"><h6>Chart</h6></div>
             <div class="col"><h6>Actions</h6></div>
         </div>
 
         <div class="row border card-body" v-for="stock in stocks" v-bind:key="stock.id">
-            <div class="col">
+            <div class="col d-flex align-items-center">
                 <p>{{stock.name}}</p>
             </div>
-            <div class="col" >
+            <div class="col d-flex align-items-center" >
                 <p>{{stock.unique_code}}</p>
             </div>
-            <div class="col">        
+            <div class="col d-flex align-items-center">        
                 <p>{{stock.max_price}}$</p>
             </div>
             <div class="col">
-                <button v-on:click="goDetails" class="btn btn-primary" :id=" stock.id ">Detail</button>
+                <Chart  class="chart" :idUrl="stock.id" ></Chart>
+            </div>
+            <div class="col d-flex align-items-center">
+                <button v-on:click="goDetails" class="btn btn-primary " :id=" stock.id ">Detail</button>
             </div>
         </div>
     </ul>
@@ -26,7 +30,13 @@
 
 <script>
 
+import Chart from './Chart.vue';
+
 export default {
+    name: 'Top',
+    components: {
+        Chart
+    },
     data() {
     return {
         stocks: [],
