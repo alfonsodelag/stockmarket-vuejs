@@ -49,10 +49,6 @@ export default {
         this.getContentFromApi();
     },
     methods: {
-        goDetails(e) {
-            const idTarget = e.target.id;
-            window.location.href='/#/detail/'+idTarget;
-        },
         updateScrollEvent() {
             // console.log("update scroll working");
             var updated = false;
