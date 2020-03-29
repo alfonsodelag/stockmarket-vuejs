@@ -1,7 +1,7 @@
 <template>
     <div>
-        <button v-on:click="addFav" class="btn btn-success" >Add</button>
-        <button v-on:click="deleteFav" class="btn btn-danger">Delete</button>
+        <button v-on:click="addFav" class="btn btn-success" v-if="this.signal == false">Add</button>
+        <button v-on:click="deleteFav" class="btn btn-danger" v-else-if="this.signal == true">Delete</button>
     </div>
 </template>
 
@@ -25,12 +25,12 @@ export default {
             signal:'' 
         }
     },
-    created() {
-        this.startFav();
+    created() {       
         // this.existFav();
     },
     mounted(){    
-
+        this.startFav();
+        this.existFav();
     },
     updated(){
         
@@ -44,11 +44,8 @@ export default {
             }
         },
         addFav(){
-            this.localstorageContent = localStorage.getItem('favorites');
-             console.log(this.localstorageContent, "1");
-            
+            this.localstorageContent = localStorage.getItem('favorites');            
             if(this.localstorageContent == ''){
-                console.log(this.localstorageContent, "2");
                 this.localstorageContent = [];
             }else{
                 this.localstorageContent = JSON.parse(this.localstorageContent);
@@ -59,7 +56,6 @@ export default {
             }
             this.localstorageContent.push(this.objectSave);
             const localStorageUploaded = JSON.stringify(this.localstorageContent);
-            console.log(this.localstorageContent, "add");
             localStorage.removeItem('favorites');
             localStorage.setItem('favorites', localStorageUploaded);
             this.existFav();
@@ -83,18 +79,17 @@ export default {
         existFav(){
             this.localstorageContent = JSON.parse(localStorage.getItem('favorites'));
             let i = this.index;
-            // if(this.localstorageContent == null || this.localstorageContent === ''){
-            //     this.signal = true;  
-            // }else{
+            if(this.localstorageContent == null || this.localstorageContent.length == 0 || this.localstorageContent == ''){
+                this.signal = false;  
+            }else{
                 for(i=0; i < this.localstorageContent.length; i++){
-                    if(this.localstorageContent[i].id_Favorite !== this.idFavorite){
+                    if(this.localstorageContent[i].id_Favorite == this.idFavorite){
                         this.signal = true;                  
                     }else{
                         this.signal = false; 
                     }               
                 }
-            // }
-                
+            }               
         }
     }
 }
