@@ -54,7 +54,9 @@ export default {
   mounted() {
     // console.log("mounted working");
     this.getContentFromApi();
-
+  },
+  updated(){
+    
   },
   methods: {
     updateScrollEvent() {

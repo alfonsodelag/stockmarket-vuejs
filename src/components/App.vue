@@ -3,7 +3,7 @@
     <HeaderComponent></HeaderComponent>
     <SubheaderComponent></SubheaderComponent>
     <Favorites></Favorites>
-    <router-view></router-view>
+    <router-view ></router-view>
   </div>
     
 </template>
