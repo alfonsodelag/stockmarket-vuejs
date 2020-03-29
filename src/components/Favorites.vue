@@ -7,6 +7,9 @@
             <div class="col"><h6>Actions</h6></div>
         </div>
 
+<div>
+    {{firstTemp}}
+</div>
         <div class="row border card-body" v-for="stock in stocks" v-bind:key="stock.id">
             <div class="col">
                 <p>{{stock.name}}</p>
@@ -20,6 +23,12 @@
             <div class="col">
                 <button v-on:click="goDetails" class="btn btn-primary" :id="stock.id">Detail</button>
             </div>
+            <div class="col">
+                <button v-on:click="getItemFromLocalStorage" class="btn btn-primary" :id="stock.id">Show retrieved data</button>
+                <div id="data">
+                    <p></p>
+                </div>
+            </div>
         </div>
     </ul>
 </template>
@@ -31,12 +40,20 @@ export default {
     return {
         stocks: [],
         load: [],
-        page: 1
+        page: 1,
+        temp: null
         };
     },
     mounted() {
         // console.log("mounted working");
         this.getContentFromApi();
+        this.getItemFromLocalStorage();
+    },
+    computed: {
+        firstTemp(){
+            if(!this.temp) return ""
+            return this.temp[0];
+        }
     },
     methods: {
         updateScrollEvent() {
@@ -62,8 +79,13 @@ export default {
                     this.stocks = [...this.stocks, ...res.data.data];
                 })
                 .catch(err => console.log(err));
-            }
         },
+        getItemFromLocalStorage(){
+            
+            const retrievedData = JSON.parse(localStorage.getItem("data"));
+            this.temp = retrievedData
+        }
+    },
         
 };
 </script>

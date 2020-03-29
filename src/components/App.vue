@@ -9,7 +9,7 @@
 
 <script>
 import HeaderComponent from './HeaderComponent.vue';
-import SubheaderComponent from './SubheaderComponent' ;
+import SubheaderComponent from './SubheaderComponent';
 
 
 export default {

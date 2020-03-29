@@ -17,11 +17,6 @@
 
         </div>
     </div>
-    <!-- <div class="container fle">
-        <h1>Hello Detail</h1>
-        <h2>{{ idUrl }}</h2>
-        <h3>{{ stocks.name }}</h3>
-    </div> -->
 </template>
 
 <script>
