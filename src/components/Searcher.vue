@@ -1,6 +1,8 @@
 <template>
     <form class="form-inline my-2 my-lg-0" id="searchForm">
-        <input v-on:keyup="autocomplete" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
+        <div class="autocomplete">        
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchInput" autocomplete="off">
+        </div>    
         <button :input="input" v-on:click="search"  class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
         <div id="searchDiv"></div>
     </form>
@@ -13,7 +15,7 @@ export default {
 
     data() {
         return{
-            input:''
+            input:'',
         }
     },
 
@@ -22,10 +24,6 @@ export default {
     },
 // https://market-place-laravel.herokuapp.com/api/v1/historic?name=W
     methods: {
-        autocomplete(){
-            this.input = document.getElementById('searchInput').value;
-            console.log(input, "autocomplete works");
-        },
         search(){
             this.input = document.getElementById('searchInput').value;
             if(this.input == ''){

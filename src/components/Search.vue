@@ -1,6 +1,5 @@
 <template>
-<<<<<<< HEAD
-    <ul>
+    <div v-if="stocks.length > 0">
         <div class="row card-header">
             <div class="col"><h6>Name</h6></div>
             <div class="col"><h6>Code</h6></div>
@@ -25,7 +24,19 @@
                 <button v-on:click="goDetail" class="btn btn-primary" :id=" stock.id ">Detail</button>
             </div>
         </div>
-    </ul>
+    </div>
+    <div v-else>
+        <div class="row card-header">
+            <div class="col"><h6>Name</h6></div>
+            <div class="col"><h6>Code</h6></div>
+            <div class="col"><h6>Last price</h6></div>
+            <div class="col"><h6>Chart</h6></div>
+            <div class="col"><h6>Actions</h6></div>
+        </div>
+        <div class="row border card-body alert alert-danger d-block text-center" >
+            No match founds
+        </div>
+    </div>
 </template>
 
 <script>
@@ -53,7 +64,6 @@ export default {
                 axios
             .get(`https://market-place-laravel.herokuapp.com/api/v1/historic?name=${this.input}`)
             .then(res => {
-                console.log(res.data.data);
                 this.stocks = [...this.stocks, ...res.data.data];
                 // this.stocks = res.data[0];
             })
@@ -68,69 +78,3 @@ export default {
     
 }
 </script>
-=======
-
-<div>
-    <HeaderComponent></HeaderComponent>
-    <SubheaderComponent></SubheaderComponent>
-     <ul>
-    <div class="row">
-      <div class="col">Name</div>
-      <div class="col">Code</div>
-      <div class="col">Price</div>
-      <div class="col">Chart</div>
-    </div>
-
-    <div class="row border">
-      <div class="col">
-        <ul>
-          <li>
-            <p>{{stock.actions.name}}</p>
-          </li>
-        </ul>
-      </div>
-      <div class="col">
-        <ul>
-          <li>
-            <p>{{stock.actions.unique_code}}</p>
-          </li>
-        </ul>
-      </div>
-      <div class="col">
-        <ul>
-          <li>
-            <p>{{stock.current_quantity}}</p>
-          </li>
-        </ul>
-      </div>
-      <div class="col">
-        <ul>
-          <li>
-            <img class="chart" src="/src/assets/images/chart.jpg" alt="chart" />
-          </li>
-        </ul>
-      </div>
-      <div class="col">
-        <ul>
-          <button class="btn btn-primary" :id="stock.actions.id">Follow</button>
-        </ul>
-      </div>
-    </div>
-  </ul>
-</div>
-</template>
-
-<script>
-
-import HeaderComponent from './HeaderComponent.vue';
-import SubheaderComponent from './SubheaderComponent' ;
-export default {
-    name: 'HeaderComponent',
-    components: {
-    HeaderComponent,
-    SubheaderComponent
-  },
-}
-</script>
-
->>>>>>> 0939b63ed338135dc2a17b0fdbac53aaee6f93e9

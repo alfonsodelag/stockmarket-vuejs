@@ -1,5 +1,5 @@
 <template>
-    <ul>
+    <div>
         <div class="row card-header">
             <div class="col"><h6>Name</h6></div>
             <div class="col"><h6>Code</h6></div>
@@ -25,7 +25,7 @@
                 <button v-on:click="goDetails" class="btn btn-primary " :id=" stock.id ">Detail</button>
             </div>
         </div>
-    </ul>
+    </div>
 </template>
 
 <script>
