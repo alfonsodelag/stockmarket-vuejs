@@ -8,7 +8,6 @@
 
 <script>
 export default {
-    name: 'SubheaderComponent',
-    
+    name: 'SubheaderComponent',   
 }
 </script>

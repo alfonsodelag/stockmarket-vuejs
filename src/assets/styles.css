@@ -2,3 +2,31 @@ img {
     height: 150px;
     width: 300px;
 }
+
+.chart{
+    display: inline;
+}
+
+.autocomplete {
+    /*the container must be positioned relative:*/
+    position: relative;
+    display: inline-block;
+  }
+  input {
+    border: 1px solid transparent;
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .autocomplete-items {
+    position: relative;
+    display: inline;
+    /* border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    /*top: 100%;
+    left: 0;
+    right: 0; */
+  }

@@ -2,21 +2,24 @@
   <div>
     <HeaderComponent></HeaderComponent>
     <SubheaderComponent></SubheaderComponent>
-    <router-view></router-view>
+    <Favorites></Favorites>
+    <router-view ></router-view>
   </div>
     
 </template>
 
 <script>
 import HeaderComponent from './HeaderComponent.vue';
-import SubheaderComponent from './SubheaderComponent';
+import SubheaderComponent from './SubheaderComponent' ;
+import Favorites from './Favorites';
 
 
 export default {
   name: 'app',
   components: {
     HeaderComponent,
-    SubheaderComponent
+    SubheaderComponent, 
+    Favorites
   },
 }
 </script>

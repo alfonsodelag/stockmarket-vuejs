@@ -1,12 +1,12 @@
 <template>
-<div class="container ">
+    <div class="container ">
         <div class="row d-flex justify-content-around">
             <div>
                 <h3>{{ stocks.name }}</h3>
                 <h4 class="text-secondary">{{ stocks.unique_code }}</h4>
             </div>
             <div>
-                <img class="chart" src="/src/assets/images/chart.jpg" alt="chart" />
+                <img class="chart" src="/src/assets/images/Logo.png" alt="chart" />
             </div>
         </div>
         <div class="row d-flex flex-column align-items-center">
@@ -14,28 +14,35 @@
             <span>{{ stocks.description }}</span>
         </div>
         <div class="row d-flex">
-
+            <Chart :idUrl="idUrl" ></Chart>
         </div>
     </div>
 </template>
 
 <script>
-
+import Chart from './Chart.vue';
 export default {
     name: 'Detail',
-
+    components: {
+        Chart
+    },
     data() {
         return{
             idUrl: '',
-            stocks: []
+            stocks: [],
+            prices: '',
+            index:'',
+            chartData: []
         }
     },
     created() {
+        this.idUrl = this.$route.params.id;  
+        this.getStockData();
+        // this.getHistoryData();
         
     },
     mounted(){    
-        this.idUrl = this.$route.params.id;  
-        this.getStockData();
+        
     },
 
     methods: {
@@ -47,8 +54,7 @@ export default {
             this.stocks = res.data[0];
         })
         .catch(err => console.log(err));
-        }
+        },
     }
-    
 }
 </script>
