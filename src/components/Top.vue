@@ -21,8 +21,12 @@
             <div class="col">
                 <Chart  class="chart" :idUrl="stock.id" ></Chart>
             </div>
-            <div class="col d-flex align-items-center">
-                <button v-on:click="goDetails" class="btn btn-primary " :id=" stock.id ">Detail</button>
+
+            <div class="col d-flex justify-content-center align-items-center">
+                <div>
+                    <DetailButton class="btn btn-primary " :id="stock.id ">Detail</DetailButton>
+                </div>                
+                <favorite-button :idFavorite="stock.id" :nameFavorite="stock.name"></favorite-button>
             </div>
         </div>
     </div>
@@ -31,11 +35,15 @@
 <script>
 
 import Chart from './Chart.vue';
+import FavoriteButton from './FavoriteButton.vue';
+import DetailButton from './DetailButton';
 
 export default {
     name: 'Top',
     components: {
-        Chart
+        Chart,
+        FavoriteButton,
+        DetailButton
     },
     data() {
     return {

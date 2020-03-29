@@ -4,6 +4,7 @@
             <div>
                 <h3>{{ stocks.name }}</h3>
                 <h4 class="text-secondary">{{ stocks.unique_code }}</h4>
+                <favorite-button :idFavorite="this.idUrl" :nameFavorite="stocks.name"></favorite-button>
             </div>
             <div>
                 <img class="chart" src="/src/assets/images/Logo.png" alt="chart" />
@@ -16,15 +17,19 @@
         <div class="row d-flex">
             <Chart :idUrl="idUrl" ></Chart>
         </div>
+        
     </div>
 </template>
 
 <script>
 import Chart from './Chart.vue';
+import FavoriteButton from './FavoriteButton.vue';
+
 export default {
     name: 'Detail',
     components: {
-        Chart
+        Chart,
+        FavoriteButton
     },
     data() {
         return{

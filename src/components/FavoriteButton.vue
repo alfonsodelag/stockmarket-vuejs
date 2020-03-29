@@ -69,7 +69,6 @@ export default {
                     this.localstorageContent.splice(i,1);                   
                 }               
             }
-            console.log(this.localstorageContent, "deleted");
             const localStorageUploaded = JSON.stringify(this.localstorageContent);
             localStorage.removeItem('favorites');
             localStorage.setItem('favorites', localStorageUploaded);

@@ -23,7 +23,7 @@
             </div>
             <div class="col d-flex justify-content-center align-items-center">
               <div>
-                <button v-on:click="goDetail" class="btn btn-primary mr-3" :id=" stock.actions.id ">Detail</button>
+                <DetailButton class="btn btn-primary mr-3" :idDetail=" stock.actions.id ">Detail</DetailButton>
               </div>                
                 <favorite-button :idFavorite="stock.actions.id" :nameFavorite="stock.actions.name"></favorite-button>
             </div>
@@ -37,12 +37,14 @@ const URL = "https://market-place-laravel.herokuapp.com/api/v1/prices?page=1";
 
 import Chart from './Chart.vue';
 import FavoriteButton from './FavoriteButton.vue';
+import DetailButton from './DetailButton';
 
 export default {
   name: 'Home',
     components: {
         Chart,
-        FavoriteButton
+        FavoriteButton,
+        DetailButton
     },
   data() {
     return {
@@ -86,11 +88,11 @@ export default {
         })
         .catch(err => console.log(err));
     },
-    goDetail(e) {
-      const idTarget = e.target.id;
-      window.location.href='/#/detail/'+idTarget;
-      // console.log(idTarget);
-    },
+    // goDetail(e) {
+    //   const idTarget = e.target.id;
+    //   window.location.href='/#/detail/'+idTarget;
+    //   // console.log(idTarget);
+    // },
   }
 };
 </script>
