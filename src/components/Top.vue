@@ -23,7 +23,7 @@
             </div>
 
             <div class="col d-flex justify-content-center align-items-center">
-                <DetailButton class="btn btn-primary mr-1" :id="stock.id ">Detail</DetailButton>              
+                <DetailButton class="btn btn-primary mr-1" :idDetail="stock.id ">Detail</DetailButton>              
                 <favorite-button :idFavorite="stock.id" :nameFavorite="stock.name"></favorite-button>
             </div>
         </div>
