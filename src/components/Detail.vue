@@ -7,7 +7,7 @@
                 <favorite-button :idFavorite="this.idUrl" :nameFavorite="stocks.name"></favorite-button>
             </div>
             <div>
-                <img class="chart" src="/src/assets/images/Logo.png" alt="chart" />
+                <img class="chart" src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png" alt="chart" />
             </div>
         </div>
         <div class="row d-flex flex-column align-items-center">
