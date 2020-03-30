@@ -8,9 +8,6 @@
                 <li class="nav-item">
                     <router-link to="/top" class="nav-link">Top</router-link>
                 </li>
-                <li class="nav-item">
-                    <router-link to="/top" class="nav-link">Favorites</router-link>
-                </li>
             </ul>
             <Searcher></Searcher>
         </div>

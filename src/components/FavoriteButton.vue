@@ -58,8 +58,8 @@ export default {
             const localStorageUploaded = JSON.stringify(this.localstorageContent);
             localStorage.removeItem('favorites');
             localStorage.setItem('favorites', localStorageUploaded);
-            this.existFav();
-            // location.reload();
+            // this.existFav();
+            location.reload();
         },
         deleteFav(){
             this.localstorageContent = JSON.parse(localStorage.getItem('favorites'));
@@ -72,8 +72,8 @@ export default {
             const localStorageUploaded = JSON.stringify(this.localstorageContent);
             localStorage.removeItem('favorites');
             localStorage.setItem('favorites', localStorageUploaded);
-            this.existFav();
-            // location.reload();
+            // this.existFav();
+            location.reload();
         },
         existFav(){
             this.localstorageContent = JSON.parse(localStorage.getItem('favorites'));
@@ -89,7 +89,8 @@ export default {
                     }               
                 }
             }               
-        }
+        },
+
     }
 }
 </script>

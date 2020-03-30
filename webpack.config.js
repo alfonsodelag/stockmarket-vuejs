@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
 
 module.exports = {
+  mode: 'production',
   entry: './src/index.js',
   output: {
     path: __dirname + '/dist',
@@ -31,18 +32,28 @@ module.exports = {
           'sass-loader',
         ],
       },
+      {
+        test: /\.(png|jp(e*)g|svg)$/,
+        use: [{
+            loader: 'url-loader',
+            options: {
+                name: 'assets/images/[hash]-[name].[ext]'
+            }
+        }]
+      },
     ]
   },
   resolve: {
     alias: {
       'vue$': 'vue/dist/vue.esm.js'
     },
-    extensions: ['*', '.js', '.vue', '.json']
+    extensions: ['*', '.js', '.vue', '.json', '.png', '.jpg']
   },
   plugins: [
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './src/index.html',
+      filename: "./index.html"
     })
   ]
 }

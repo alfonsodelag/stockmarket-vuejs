@@ -21,10 +21,8 @@
             <div class="col">
                 <Chart  class="chart" :idUrl="stock.actions.id" ></Chart>
             </div>
-            <div class="col d-flex justify-content-center align-items-center">
-              <div>
-                <DetailButton class="btn btn-primary mr-3" :idDetail=" stock.actions.id ">Detail</DetailButton>
-              </div>                
+            <div class="col d-flex justify-content-center align-items-center">              
+                <DetailButton class="btn btn-primary mr-1" :idDetail=" stock.actions.id ">Detail</DetailButton>                              
                 <favorite-button :idFavorite="stock.actions.id" :nameFavorite="stock.actions.name"></favorite-button>
             </div>
         </div>

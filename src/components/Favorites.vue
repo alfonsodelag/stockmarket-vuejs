@@ -6,11 +6,9 @@
                 <div class=" d-inline-flex"><h6>{{fav.name_Favorite}}</h6></div>
                 <div class="d-inline-flex justify-content-center">
                     <DetailButton class="btn btn-primary mr-1" :idDetail="fav.id_Favorite">Detail</DetailButton>
-                    <favorite-button :idFavorite="fav.id_Favorite" :nameFavorite="fav.name_Favorite"></favorite-button>
+                    <favorite-button  :idFavorite="fav.id_Favorite" :nameFavorite="fav.name_Favorite"></favorite-button>
                 </div>       
-            </div>
-            
-            
+            </div>            
         </div>
         <hr>        
     </div>
@@ -28,15 +26,17 @@ export default {
     },
     data() {
         return{
-            favData : ''
+            favData : '',
         }
     },
     created() {
-
-        
+       
     },
     mounted(){    
         this.getFavData();
+    },
+    updated(){
+        // this.getFavData();
     },
 
     methods: {
@@ -49,7 +49,8 @@ export default {
                 this.favData = this.localstorageContent
                 console.log(this.favData);
             }               
-        }
+        },
+
     }
 }
 </script>
