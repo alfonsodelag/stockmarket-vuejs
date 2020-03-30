@@ -63,3 +63,10 @@ export default {
     }
 }
 </script>
+
+<style >
+img{
+    height: 150px;
+    width: 300px;
+}
+</style>

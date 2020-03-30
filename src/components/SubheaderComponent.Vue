@@ -11,3 +11,10 @@ export default {
     name: 'SubheaderComponent',   
 }
 </script>
+
+<style >
+img{
+    height: 150px;
+    width: 300px;
+}
+</style>
