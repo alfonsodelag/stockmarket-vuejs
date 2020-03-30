@@ -5,6 +5,7 @@ import Routes from './routes/routes.js';
 import Chartkick from 'vue-chartkick';
 import Chart from 'chart.js';
 import { AutoCompletePlugin } from "@syncfusion/ej2-vue-dropdowns";
+import './assets/styles.scss'
 
 Vue.use(VueRouter);
 Vue.use(Chartkick.use(Chart));

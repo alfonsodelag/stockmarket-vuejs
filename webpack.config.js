@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: 'production',
@@ -22,14 +23,11 @@ module.exports = {
         loader: 'vue-loader'
       },
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.scss$/,
         use: [
-          // Creates `style` nodes from JS strings
-          'style-loader',
-          // Translates CSS into CommonJS
-          'css-loader',
-          // Compiles Sass to CSS
-          'sass-loader',
+          {loader: 'style-loader'},
+          {loader: 'css-loader'},
+          {loader: 'sass-loader'}
         ],
       },
       {
@@ -54,6 +52,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: "./index.html"
-    })
+    }),
+    new MiniCssExtractPlugin({
+      template: './src/assets/',
+      filename: 'bundle.css'
+  })
   ]
 }
